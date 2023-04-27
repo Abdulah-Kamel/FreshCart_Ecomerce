@@ -20,7 +20,8 @@ export default function Checkout() {
     onSubmit:handleSubmit
   })
   return (
-    <div className="w-50 py-5 mx-auto">
+    <div className="py-5">
+      <div className="container py-5 my-5">
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="details">details :</label>
         <input
@@ -51,6 +52,7 @@ export default function Checkout() {
         />
         <button className='btn bg-main my-3 text-white' type='submit'>Submit</button>
       </form>
+      </div>
     </div>
   );
 }
