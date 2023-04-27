@@ -49,58 +49,60 @@ export default function Login({ saveUserData }) {
       {error.length > 0 ? (
         <div className="alert alert-danger">{error}</div>
       ) : null}
-      <form onSubmit={formik.handleSubmit}>
-        <label htmlFor="email">Email: </label>
-        <input
-          type="email"
-          className="form-control my-2"
-          name="email"
-          id="email"
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
-        {formik.errors.email && formik.touched.email ? (
-          <div className="alert alert-danger">{formik.errors.email}</div>
-        ) : null}
-        <label htmlFor="password">Password: </label>
-        <input
-          type="password"
-          className="form-control my-2"
-          name="password"
-          id="password"
-          value={formik.values.password}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
-        {formik.errors.password && formik.touched.password ? (
-          <div className="alert alert-danger">{formik.errors.password}</div>
-        ) : null}
-        <Link to={"/forgetpassword"} className="nav-link text-main mt-2">
-          Forget password ...?
-        </Link>
-        <p>
-          Dont have an account
-        <Link to={"/signup"} className="nav-link text-main">
-          Signup Now
-        </Link>
-        </p>
-        <div className="d-flex justify-content-end">
-          {loading ? (
-            <button className="btn bg-main text-white">
-              <i className="fas fa-spinner fa-spin"></i>
-            </button>
-          ) : (
-            <button
-              disabled={!(formik.isValid && formik.dirty)}
-              className="btn bg-main text-white"
-              type="submit"
-            >
-              Submit
-            </button>
-          )}
-        </div>
-      </form>
+      <div className="container py-5">
+        <form onSubmit={formik.handleSubmit}>
+          <label htmlFor="email">Email: </label>
+          <input
+            type="email"
+            className="form-control my-2"
+            name="email"
+            id="email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.errors.email && formik.touched.email ? (
+            <div className="alert alert-danger">{formik.errors.email}</div>
+          ) : null}
+          <label htmlFor="password">Password: </label>
+          <input
+            type="password"
+            className="form-control my-2"
+            name="password"
+            id="password"
+            value={formik.values.password}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.errors.password && formik.touched.password ? (
+            <div className="alert alert-danger">{formik.errors.password}</div>
+          ) : null}
+          <Link to={"/forgetpassword"} className="nav-link text-main mt-2">
+            Forget password ...?
+          </Link>
+          <p>
+            Dont have an account
+            <Link to={"/signup"} className="nav-link text-main">
+              Signup Now
+            </Link>
+          </p>
+          <div className="d-flex justify-content-end">
+            {loading ? (
+              <button className="btn bg-main text-white">
+                <i className="fas fa-spinner fa-spin"></i>
+              </button>
+            ) : (
+              <button
+                disabled={!(formik.isValid && formik.dirty)}
+                className="btn bg-main text-white"
+                type="submit"
+              >
+                Submit
+              </button>
+            )}
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

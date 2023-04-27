@@ -47,47 +47,51 @@ export default function ResetPassword() {
       {error.length > 0 ? (
         <div className="alert alert-danger">{error}</div>
       ) : null}
-      <form onSubmit={formik.handleSubmit}>
-        <label htmlFor="email">Email: </label>
-        <input
-          type="email"
-          className="form-control my-2"
-          name="email"
-          id="email"
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
-        {formik.errors.email && formik.touched.email ? (
-          <div className="alert alert-danger">{formik.errors.email}</div>
-        ) : null}
-        <label htmlFor="newPassword">newPassword: </label>
-        <input
-          type="password"
-          className="form-control my-2"
-          name="newPassword"
-          id="newPassword"
-          value={formik.values.newPassword}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
-        {formik.errors.newPassword && formik.touched.newPassword ? (
-          <div className="alert alert-danger">{formik.errors.newPassword}</div>
-        ) : null}
-        {loading ? (
-          <button className="btn bg-main text-white my-2">
-            <i className="fas fa-spinner fa-spin"></i>
-          </button>
-        ) : (
-          <button
-            disabled={!(formik.isValid && formik.dirty)}
-            className="btn bg-main text-white my-2"
-            type="submit"
-          >
-            Submit
-          </button>
-        )}
-      </form>
+      <div className="container py-5">
+        <form onSubmit={formik.handleSubmit}>
+          <label htmlFor="email">Email: </label>
+          <input
+            type="email"
+            className="form-control my-2"
+            name="email"
+            id="email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.errors.email && formik.touched.email ? (
+            <div className="alert alert-danger">{formik.errors.email}</div>
+          ) : null}
+          <label htmlFor="newPassword">newPassword: </label>
+          <input
+            type="password"
+            className="form-control my-2"
+            name="newPassword"
+            id="newPassword"
+            value={formik.values.newPassword}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.errors.newPassword && formik.touched.newPassword ? (
+            <div className="alert alert-danger">
+              {formik.errors.newPassword}
+            </div>
+          ) : null}
+          {loading ? (
+            <button className="btn bg-main text-white my-2">
+              <i className="fas fa-spinner fa-spin"></i>
+            </button>
+          ) : (
+            <button
+              disabled={!(formik.isValid && formik.dirty)}
+              className="btn bg-main text-white my-2"
+              type="submit"
+            >
+              Submit
+            </button>
+          )}
+        </form>
+      </div>
     </div>
   );
 }

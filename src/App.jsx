@@ -1,5 +1,5 @@
 import './App.scss';
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import { createBrowserRouter,createHashRouter,RouterProvider } from 'react-router-dom';
 import MasterLayout from './components/MasterLayout/MasterLayout'
 import Home from './components/Home/Home'
 import Cart from './components/Cart/Cart'
@@ -40,7 +40,7 @@ function App() {
     
 
 
-  let router = createBrowserRouter([
+  let router = createHashRouter([
     {
       path: "",
       element: <MasterLayout userData={userData} setUserData={setUserData} />,

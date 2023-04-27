@@ -3,14 +3,13 @@ import { createContext, useEffect, useState } from "react";
 
 export let cartContext = createContext();
 export default function CartContextProvider(props) {
-  const [cartId, setcartId] = useState(null)
+  const [cartId, setcartId] = useState('')
   const [numberOfCart, setNumberOfCart] = useState(0);
  async function CartCount() {
    let {data} = await getCart();
    if (data?.status === "success") {
      setNumberOfCart(data?.numOfCartItems);
      setcartId(data.data._id);
-    //  console.log(data.data._id);
    }
     }
   useEffect(() => {
