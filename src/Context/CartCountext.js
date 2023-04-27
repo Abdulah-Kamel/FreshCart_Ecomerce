@@ -63,7 +63,7 @@ export default function CartContextProvider(props) {
   function onlinePayment(cartId, shippingAddress) {
     return axios
       .post(
-        `https://route-ecommerce.onrender.com/api/v1/orders/checkout-session/${cartId}?url=https://fresh-cart-ecommerce.netlify.app`,
+        `https://route-ecommerce.onrender.com/api/v1/orders/checkout-session/${cartId}?url=https://fresh-cart-ecommerce.netlify.app/#`,
         {
           shippingAddress,
         },
