@@ -17,13 +17,11 @@ export default function Header() {
     cssEase: "linear",
   };
   return (
-    <div className="container">
+    <div className="container px-5 px-lg-3">
         <Slider {...settings}>
           {images.map((image, index) => {
             return (
-              <div className="col" key={index}>
-                <img src={image} alt="" className="w-100 vh-100" />
-              </div>
+                <img src={image} alt="" className="w-100 vh-100" key={index}/>
             );
           })}
         </Slider>

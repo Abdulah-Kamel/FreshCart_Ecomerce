@@ -52,7 +52,7 @@ export default function Categorys() {
     getCategorys();
   }, []);
   return (
-    <div className="row">
+    <div className="container p-3">
       {allCategores === null ? (
         <div className="d-flex justify-content-center">
           <InfinitySpin width="200" color="#4fa94d" />

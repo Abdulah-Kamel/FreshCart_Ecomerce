@@ -48,17 +48,19 @@ export default function ProudctDetails() {
   return (
     <div className="container my-5 py-5">
       {product !== null ? (
-        <div className="row align-items-center ">
+        <div className="row align-items-center gy-5">
           <div className="col-md-4">
-            <Slider {...settings}>
-              {product.images?.map((image, index) => {
-                return (
-                  <div key={index}>
-                    <img src={image} alt="" className="w-100" />
-                  </div>
-                );
-              })}
-            </Slider>
+            <div className="px-3">
+              <Slider {...settings}>
+                {product.images?.map((image, index) => {
+                  return (
+                    <div key={index}>
+                      <img src={image} alt="" className="w-100" />
+                    </div>
+                  );
+                })}
+              </Slider>
+            </div>
           </div>
           <div className="col-md-8">
             <div className="proudct-info">

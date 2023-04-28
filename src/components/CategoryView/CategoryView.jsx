@@ -16,7 +16,7 @@ export default function CategoryView() {
     getCategory(id);
   }, [id]);
   return (
-    <div className="container py-5">
+    <div className="container py-5 px-4 px-lg-3 px-xl-0">
       <h2 className="fw-bolder text-center">Categorys</h2>
       <div className="row g-5 py-5">
 
