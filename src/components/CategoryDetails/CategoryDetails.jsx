@@ -35,9 +35,9 @@ export default function CategoryDetails() {
   }, []);
 
   return (
-    <div className="container">
-      <h2 className="text-main">Our Proudcts : </h2>
-      <div className="row gy-4 py-5">
+    <div className="container py-5 my-5">
+      <h2 className="text-main pt-5">Our Proudcts : </h2>
+      <div className="row gy-4 py-5 my-5">
         {proudcts !== null ? (
           proudcts.filter((proudct) => {
             return proudct.category._id === id;
