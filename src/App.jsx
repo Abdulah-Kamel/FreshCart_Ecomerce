@@ -40,7 +40,7 @@ function App() {
     
 
 
-  let router = createBrowserRouter([
+  let router = createHashRouter([
     {
       path: "",
       element: <MasterLayout userData={userData} setUserData={setUserData} />,
