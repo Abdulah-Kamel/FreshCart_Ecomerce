@@ -63,7 +63,7 @@ export default function CartContextProvider(props) {
   function onlinePayment(cartId, shippingAddress) {
     return axios
       .post(
-        `https://route-ecommerce.onrender.com/api/v1/orders/checkout-session/${cartId}?url=https://freshcart.vercel.app/`,
+        `https://route-ecommerce.onrender.com/api/v1/orders/checkout-session/${cartId}?url=https://freshcart.vercel.app/#`,
         {
           shippingAddress,
         },
