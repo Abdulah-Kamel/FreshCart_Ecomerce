@@ -5,10 +5,6 @@ import { InfinitySpin } from "react-loader-spinner";
 import style from "./FeaturedProudct.module.scss";
 export default function FeaturedProudct() {
   const [allProducts, setProducts] = useState(null);
-  const [isActive, setIsActive] = useState(false);
-  const handleClick = (event) => {
-    setIsActive(current=>!current)
-  }
   async function getProudcts() {
     let { data } = await axios.get(
       "https://route-ecommerce.onrender.com/api/v1/products"
@@ -29,13 +25,6 @@ export default function FeaturedProudct() {
           .map((product, index) => {
             return (
               <div className="col-md-3 position-relative" key={index}>
-                <div
-                  className={`heart position-absolute mt-2 me-4 end-0 ${style.index}`}
-                >
-                  <i
-                    className={`fa-regular fa-heart text-main fa-xl  ${style.click} ${style.hover} ${isActive ?`bg-green` :null}`}
-                  ></i>
-                </div>
                 <Link to={`/proudcts/${product.id}`} className="nav-link">
                   <div className="card">
                     <img
