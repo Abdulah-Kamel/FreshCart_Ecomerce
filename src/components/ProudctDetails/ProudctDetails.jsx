@@ -37,7 +37,7 @@ export default function ProudctDetails() {
   let ProudctId;
   async function getDetails(ProudctId) {
     let { data } = await axios.get(
-      `https://route-ecommerce.onrender.com/api/v1/products/${ProudctId}`
+      `https://route-ecommerce-app.vercel.app/api/v1/products/${ProudctId}`
     );
     setProduct(data.data);
   }

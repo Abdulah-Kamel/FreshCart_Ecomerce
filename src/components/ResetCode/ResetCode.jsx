@@ -12,7 +12,7 @@ export default function ResetCode() {
     setLoading(true);
     let { data } = await axios
       .post(
-        "https://route-ecommerce.onrender.com/api/v1/auth/verifyResetCode",
+        "https://route-ecommerce-app.vercel.app/api/v1/auth/verifyResetCode",
         values
       )
       .catch((err) => {

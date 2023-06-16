@@ -20,7 +20,7 @@ export default function CartContextProvider(props) {
   function addToCart(id) {
     return axios
       .post(
-        "https://route-ecommerce.onrender.com/api/v1/cart",
+        "https://route-ecommerce-app.vercel.app/api/v1/cart",
         { productId: id },
         { headers }
       )
@@ -30,14 +30,14 @@ export default function CartContextProvider(props) {
 
   function getCart() {
     return axios
-      .get("https://route-ecommerce.onrender.com/api/v1/cart", { headers })
+      .get("https://route-ecommerce-app.vercel.app/api/v1/cart", { headers })
       .then((Response) => Response)
       .catch((err) => err);
   }
   function updateCart(id, count) {
     return axios
       .put(
-        `https://route-ecommerce.onrender.com/api/v1/cart/${id}`,
+        `https://route-ecommerce-app.vercel.app/api/v1/cart/${id}`,
         { count },
         { headers }
       )
@@ -46,7 +46,7 @@ export default function CartContextProvider(props) {
   }
   function deletItem(id) {
     return axios
-      .delete(`https://route-ecommerce.onrender.com/api/v1/cart/${id}`, {
+      .delete(`https://route-ecommerce-app.vercel.app/api/v1/cart/${id}`, {
         headers,
       })
       .then((Response) => Response)
@@ -54,7 +54,7 @@ export default function CartContextProvider(props) {
   }
    function ClearCart() {
    return axios
-     .delete("https://route-ecommerce.onrender.com/api/v1/cart/", {
+     .delete("https://route-ecommerce-app.vercel.app/api/v1/cart/", {
        headers,
      })
      .then((Response) => Response)
@@ -63,7 +63,7 @@ export default function CartContextProvider(props) {
   function onlinePayment(cartId, shippingAddress) {
     return axios
       .post(
-        `https://route-ecommerce.onrender.com/api/v1/orders/checkout-session/${cartId}?url=https://freshcart.vercel.app/#/`,
+        `https://route-ecommerce-app.vercel.app/api/v1/orders/checkout-session/${cartId}?url=https://freshcart.vercel.app/#/`,
         {
           shippingAddress,
         },
@@ -76,7 +76,7 @@ export default function CartContextProvider(props) {
   }
   function getBrands() {
 return axios
-  .get("https://route-ecommerce.onrender.com/api/v1/brands", {
+  .get("https://route-ecommerce-app.vercel.app/api/v1/brands", {
     headers,
   })
   .then((Response) => Response)
@@ -84,13 +84,13 @@ return axios
     }
   function getProudcts() {
 return axios
-  .get("https://route-ecommerce.onrender.com/api/v1/products/")
+  .get("https://route-ecommerce-app.vercel.app/api/v1/products/")
   .then((Response) => Response)
   .catch((err) => err);
     }
   function getOrders() {
 return axios
-  .get("https://route-ecommerce.onrender.com/api/v1/orders", {
+  .get("https://route-ecommerce-app.vercel.app/api/v1/orders", {
     headers,
   })
   .then((Response) => Response)
@@ -99,7 +99,7 @@ return axios
   function addToWishist(id) {
     return axios
       .post(
-        "https://route-ecommerce.onrender.com/api/v1/cart",
+        "https://route-ecommerce-app.vercel.app/api/v1/cart",
         { productId: id },
         { headers }
       )

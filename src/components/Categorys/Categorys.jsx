@@ -44,7 +44,7 @@ export default function Categorys() {
     const [allCategores, setCat] = useState(null);
   async function getCategorys() {
     let { data } = await axios.get(
-      "https://route-ecommerce.onrender.com/api/v1/categories"
+      "https://route-ecommerce-app.vercel.app/api/v1/categories"
     );
     setCat(data.data);
   }

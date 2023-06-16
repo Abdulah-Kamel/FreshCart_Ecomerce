@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate,Link } from "react-router-dom";
 
 export default function Signup() {
-  let baseUrl = "https://route-ecommerce.onrender.com";
+  let baseUrl = "https://route-ecommerce-app.vercel.app";
   let navigate = useNavigate();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);

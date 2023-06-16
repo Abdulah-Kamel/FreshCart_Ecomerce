@@ -10,7 +10,7 @@ export default function ForgetPassword() {
   async function forget(values) {
     setLoading(true);
     let { data } = await axios.post(
-      "https://route-ecommerce.onrender.com/api/v1/auth/forgotPasswords",
+      "https://route-ecommerce-app.vercel.app/api/v1/auth/forgotPasswords",
       values
     );
     if (data.statusMsg === "success") {
