@@ -36,7 +36,7 @@ export default function Signup() {
       .matches(/^01[1052][0-9]{8}$/i, "phone is not valid"),
     password: Yup.string()
       .required("password is required")
-      .matches(/^[A-Z][a-z0-9]{6,}$/i, "password is not valid"),
+      .matches(/^[A-Z][a-z0-9]{6,}$/i, "Password Must Start With Capital Letter"),
     rePassword: Yup.string()
       .required("rePassword is required")
       .oneOf([Yup.ref("password")], "repassword dose not match"),
