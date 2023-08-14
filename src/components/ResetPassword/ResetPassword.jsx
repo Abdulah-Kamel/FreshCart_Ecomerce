@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export default function ResetPassword() {
-  let baseUrl = "https://route-ecommerce-app.vercel.app";
+  let baseUrl = "https://ecommerce.routemisr.com";
   let navigate = useNavigate();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);

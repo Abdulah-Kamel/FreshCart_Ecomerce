@@ -7,7 +7,7 @@ export default function FeaturedProudct() {
   const [allProducts, setProducts] = useState(null);
   async function getProudcts() {
     let { data } = await axios.get(
-      "https://route-ecommerce-app.vercel.app/api/v1/products"
+      "https://ecommerce.routemisr.com/api/v1/products"
     );
     setProducts(data.data);
   }
