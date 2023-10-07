@@ -56,23 +56,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="about">
-          <div className="row gy-4">
-            <p className="h4 text-center">تيم المشروع</p>
-            <div className="col-md-6 text-center">عبدالله كامل محمود احمد</div>
-            <div className="col-md-6 text-center">
-              محمد مصطفى محمد مصطفى حسن
-            </div>
-            <div className="col-md-6 text-center">
-              محمود عبدالغني محمود عبدالغني المسلماني
-            </div>
-            <div className="col-md-6 text-center">محمد محمود ابراهيم محمد</div>
-            <div className="col-md-6 text-center">محمود أحمد عبد الوهاب أحمد مرسى</div>
-            <div className="col-md-6 text-center">محمد نشات محمد عبد الجابر</div>
-            <div className="col-md-6 text-center">حسين عادل احمد محمد</div>
-            <div className="col-md-6 text-center">محمود سيد محمود علي بدوي</div>
-          </div>
-        </div>
       </div>
     </div>
   );
